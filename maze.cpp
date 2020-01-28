@@ -1,6 +1,8 @@
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
 #endif
+#include <windows.h>
+
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
@@ -13,7 +15,7 @@
 #include <time.h>
 #include <string>
 #include <string.h>
-#include "SOIL.h"
+#include <SOIL/SOIL.h>
 
 
 
@@ -229,8 +231,8 @@ void drawTextureCube(int x ,int y,int z,int textureType){
 	
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR); 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, 0x812F);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, 0x812F);
   
 	
 	glBegin(GL_POLYGON); // Back
